@@ -127,4 +127,4 @@ var floatObj = function() {
         multiply: multiply,
         divide: divide
     }
-}();
+}(); 

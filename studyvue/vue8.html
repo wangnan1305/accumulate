@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="../vue.js"></script>
+	<script src="../jquery.js"></script>
+	<style>
+				/* 必需 */
+		.expand-transition {
+		  transition: all .3s ease;
+		  height: 30px;
+		  padding: 10px;
+		  background-color: #eee;
+		  overflow: hidden;
+		}
+
+		/* .expand-enter 定义进入的开始状态 */
+		/* .expand-leave 定义离开的结束状态 */
+		.expand-enter, .expand-leave {
+		  height: 0;
+		  padding: 0 10px;
+		  opacity: 0;
+		}
+	</style>
+	<title>vue</title>
+</head>
+<body>
+<div id="show">
+	<div v-if="show" transition="expand">hello</div>
+	<button v-on:click="clickbtn">点击</button>
+</div>
+
+<script>
+	var vm = new Vue({
+		el:"#show",
+		data:{
+			show:true
+		},
+		methods:{
+			clickbtn:function(){
+				if(this.show){
+					this.show = false
+				}else{
+					this.show = true
+				}
+			}
+		}
+	})
+
+	// Vue.transition('expand', {
+
+	//   beforeEnter: function (el) {
+	//     el.textContent = 'beforeEnter'
+	//   },
+	//   enter: function (el) {
+	//     el.textContent = 'enter'
+	//   },
+	//   afterEnter: function (el) {
+	//     el.textContent = 'afterEnter'
+	//   },
+	//   enterCancelled: function (el) {
+	//     // handle cancellation
+	//   },
+
+	//   beforeLeave: function (el) {
+	//     el.textContent = 'beforeLeave'
+	//   },
+	//   leave: function (el) {
+	//     el.textContent = 'leave'
+	//   },
+	//   afterLeave: function (el) {
+	//     el.textContent = 'afterLeave'
+	//   },
+	//   leaveCancelled: function (el) {
+	//     // handle cancellation
+	//   }
+	// })
+
+
+</script>
+</body>
+</html>
