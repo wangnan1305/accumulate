@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-</head>
-<body>
-<li></li>
-<li></li>
-<li></li>
-<script type="text/javascript">
-	var list = document.getElementsByTagName("li");
+var list = document.getElementsByTagName("li");
 	var arrayList = Array.prototype.slice.call(list);
 
 	var myObj = {
@@ -58,6 +47,3 @@
 
 	// console.dir(Array)
 	// console.dir(Array.prototype)
-</script>
-</body>
-</html>
