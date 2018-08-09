@@ -1,2 +1,2 @@
-# owncode
-代码库
+# accumulation
+积累的工具函数
