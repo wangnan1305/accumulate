@@ -10,7 +10,7 @@ function parse(userAgent) {
 
     var hash = {
         //若需要添加360浏览器，直接将360Browser添加到listBroName数组的最前面即可
-        listBroName: ['Opera', 'Firefox', 'JMBrowser', 'BaiDuBrowser', 'UCBrowser', 'QQBrowser', 'SouGouBrowser', 'LieBaoBrowser',
+        listBroName: ['Opera', 'Firefox', 'BaiDuBrowser', 'UCBrowser', 'QQBrowser', 'SouGouBrowser', 'LieBaoBrowser',
             '2345Browser', 'EdgeBrowser', 'QiyuBrowser', 'QuarkBrowser', 'YandexBrowser', 'TheWorldBrowser', 'XiaoMiBrowser', 'Chrome', 'Safari', 'IE'],
         listSysName: ['Windows', 'Windows Phone', 'Mac OS', 'iOS', 'Android', 'Linux']
     };
@@ -45,12 +45,6 @@ function parse(userAgent) {
          */
         'Firefox': function () {
             return u.indexOf('Firefox') > -1 || u.indexOf('FxiOS') > -1;
-        },
-        /**
-         * @return boolean
-         */
-        'JMBrowser': function () {
-            return u.indexOf('JM_IOS') > -1 || u.indexOf('JM_ANDROID') > -1 || u.indexOf('JM_PC') > -1;
         },
         /**
          * @return boolean
@@ -205,9 +199,6 @@ function parse(userAgent) {
             } else {
                 return t;
             }
-        },
-        'JMBrowser': function () {
-            return u.replace(/^.*JM_(IOS|ANDROID|PC)\/([\d+.]+).*$/, '$2');
         },
         'UCBrowser': function () {
             return u.replace(/^.*UC?Browser\/([\d+.]+).*$/, '$1');
