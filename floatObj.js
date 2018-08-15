@@ -110,3 +110,5 @@ var floatObj = function() {
         divide: divide
     }
 }(); 
+
+module.exports.floatObj = floatObj;
